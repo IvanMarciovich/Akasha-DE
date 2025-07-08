@@ -1,0 +1,93 @@
+/* Estilo geral da barra */
+window#waybar {
+    background: transparent;
+    color: #cdd6f4;
+    font-family: "JetBrainsMono Nerd Font", FontAwesome, sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 15px; /* Bordas arredondadas na barra principal */
+}
+
+/* Estilo padrão para TODOS os módulos */
+#workspaces,
+#window,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#tray,
+#custom-power {
+    background-color: #1e1e2e; /* Fundo escuro padrão (Catppuccin Base) */
+    color: #cdd6f4;
+    padding: 0 13px;
+    margin: 5px 3px; /* Margem vertical e horizontal para criar o espaçamento */
+    border: 1px solid #313244; /* Borda sutil */
+    border-radius: 10px; /* Bordas arredondadas para o efeito pílula */
+    transition: background-color 0.3s; /* Efeito suave de transição */
+}
+
+/* Efeito de HOVER para TODOS os módulos */
+#workspaces:hover,
+#window:hover,
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#tray:hover,
+#custom-power:hover {
+    background-color: #45475a; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo dos botões de workspace */
+#workspaces button {
+    color: #6c7086; /* Cor dos workspaces inativos (Subtext0) */
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 0 5px;
+    transition: all 0.3s;
+}
+
+/* Estilo do workspace que está focado/ativo */
+#workspaces button.active {
+    color: #89b4fa; /* Azul */
+    font-size: 16px; /* Destaca um pouco o ícone ativo */
+}
+
+/* Estilo para workspace com janelas, mas não focado */
+#workspaces button.occupied {
+    color: #a6adc8; /* Cor um pouco mais clara para indicar ocupado */
+}
+
+/* Estilo quando o mouse passa por cima de um workspace */
+#workspaces button:hover {
+    color: #cdd6f4;
+}
+
+/* Cores específicas para cada módulo */
+#clock {
+    color: #a6e3a1; /* Verde */
+}
+
+#pulseaudio {
+    color: #f9e2af; /* Amarelo */
+}
+
+#network {
+    color: #cba6f7; /* Roxo */
+}
+
+#cpu {
+    color: #f38ba8; /* Vermelho/Rosa */
+}
+
+#memory {
+    color: #89dceb; /* Ciano */
+}
+
+#custom-power {
+    color: #f2cdcd; /* Rosa claro */
+    margin-right: 6px; /* Um pouco mais de espaço na direita */
+}

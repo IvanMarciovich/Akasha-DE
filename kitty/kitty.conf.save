@@ -1,0 +1,7 @@
+include nightfox.conf
+
+# Define uma imagem de fundo específica para o terminal
+background_image /caminho/completo/para/sua/imagem.png
+
+# Define como a imagem deve ser exibida (scaled = esticada para caber na janela)
+background_image_layout scaled

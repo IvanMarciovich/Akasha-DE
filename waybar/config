@@ -1,0 +1,88 @@
+{
+    // Posição da barra (top, bottom, left, right)
+    "position": "top",
+    "height": 35, // Aumentei um pouco a altura para acomodar o novo estilo
+    "spacing": 5, // Aumentei um pouco o espaçamento entre os módulos
+
+    // Módulos da esquerda
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+
+    // Módulos do centro
+    "modules-center": ["clock"],
+
+    // Módulos da direita
+    "modules-right": [
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "network",
+        "tray",
+        "custom/power"
+    ],
+
+    // Configuração de cada módulo
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "format-icons": {
+            "active": "",    // Ícone para workspace ativo
+            "default": "",   // Ícone para workspaces vazios
+            "urgent": ""
+        },
+        "persistent_workspaces": {
+            "1": [], "2": [], "3": [], "4": [], "5": []
+        }
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 35
+    },
+    "cpu": {
+        "format": "CPU {usage}%",
+        "tooltip": true,
+        "on-click": "foot btop"
+    },
+    "memory": {
+        "format": " {used:0.1f}G/{total:0.1f}G",
+        "on-click": "foot btop"
+    },
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": " {:%d/%m/%Y}",
+        "tooltip-format": "<big>{:%A, %d de %B de %Y}</big>"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": " Mudo",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀 Ethernet",
+        "format-disconnected": "󰖪 Desconectado",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "on-click": "foot nm-connection-editor"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "~/.config/rofi/scripts/powermenu.sh" // Caminho para o seu script!
+    }
+}

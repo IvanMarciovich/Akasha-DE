@@ -1,0 +1,48 @@
+* {
+    background-color:   #1e1e2e; /* Base */
+    text-color:         #cdd6f4; /* Text */
+    font:               "JetBrainsMono Nerd Font 12";
+    border-radius:      10px;
+}
+
+window {
+    width: 20%;
+    padding: 20px;
+    border: 2px;
+    border-color: #89b4fa; /* Blue */
+}
+
+mainbox {
+    children: [inputbar, listview];
+    spacing: 15px;
+}
+
+inputbar {
+    children: [prompt];
+    padding: 10px;
+    background-color: #313244; /* Surface0 */
+}
+
+prompt {
+    text-color: #89b4fa; /* Blue */
+}
+
+listview {
+    columns: 1;
+    lines: 4;
+    spacing: 10px;
+}
+
+element {
+    padding: 10px;
+    background-color: #313244; /* Surface0 */
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element.selected {
+    background-color: #89b4fa; /* Blue */
+    text-color: #1e1e2e;
+}
